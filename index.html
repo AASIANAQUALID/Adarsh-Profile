@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Adarsh Priyadarshi &mdash; Operations, Marketing Strategy &amp; Growth</title>
+  <meta name="description" content="Portfolio of Adarsh Priyadarshi &mdash; WashU MBA Dean's Scholar (GMAT 760) specializing in Supply Chain Operations, Growth Marketing Strategy, and Process Transformation."/>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/style.css"/>
+
+  <script>
+    (function(){
+      var saved = localStorage.getItem('theme');
+      if(saved === 'dark'){
+        document.documentElement.setAttribute('data-theme', 'dark');
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+
+<div class="noise-overlay"></div>
+
+<!-- Toast Notification -->
+<div id="toastMsg" class="toast-msg">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+  <span id="toastText">Copied to clipboard!</span>
+</div>
+
+<!-- ========================================================================
+     NAVIGATION BAR
+     ======================================================================== -->
+<nav id="navbar" class="navbar">
+  <a href="#" class="nav-logo">Adarsh Priyadarshi<span class="dot">.</span></a>
+  <div class="nav-links">
+    <a href="#about" class="nav-link">About</a>
+    <a href="#projects" class="nav-link">Projects</a>
+    <a href="#skills" class="nav-link">Skills</a>
+    <a href="#experience" class="nav-link">Experience</a>
+  </div>
+  <div class="nav-actions">
+    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark / light theme" title="Toggle dark / light mode">
+      <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+      <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+    </button>
+    <a href="#contact" class="btn-hire">Let's connect &rarr;</a>
+    <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu"><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- Mobile Drawer -->
+<div id="mobile-menu" class="mobile-menu">
+  <a href="#about" class="mobile-nav-link">About</a>
+  <a href="#projects" class="mobile-nav-link">Projects</a>
+  <a href="#skills" class="mobile-nav-link">Skills</a>
+  <a href="#experience" class="mobile-nav-link">Experience</a>
+  <a href="#contact" class="mobile-nav-link" style="color: var(--accent);">Contact &rarr;</a>
+</div>
+
+<!-- ========================================================================
+     HERO SECTION
+     ======================================================================== -->
+<section id="hero" class="hero">
+  <canvas id="particle-canvas"></canvas>
+  <div class="hero-content">
+    <h1 class="hero-title">
+      <span class="line reveal-line">Operations,</span>
+      <span class="line reveal-line accent-gradient">Growth Marketing</span>
+      <span class="line reveal-line">&amp; Strategy</span>
+    </h1>
+    <p class="hero-sub">
+      <strong>MBA @ WashU</strong> (Dean's Scholar &bull; GMAT 760). I bridge <em>operational rigor</em>, <em>growth marketing strategy</em>, and <em>predictive analytics</em> to optimize supply chain workflows and scale multi-channel market reach.
+    </p>
+    <div class="hero-cta reveal-up">
+      <a href="#projects" class="btn-primary">
+        <span>View Projects</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#contact" class="btn-ghost">
+        <span>Get In Touch</span>
+      </a>
+    </div>
+    <div class="hero-stats reveal-up">
+      <div class="stat">
+        <div class="stat-num-wrap"><span class="stat-num" data-count="87">0</span><span>%</span></div>
+        <p>Forecast Error Cut</p>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <div class="stat-num-wrap"><span class="stat-num" data-count="45">0</span><span>%</span></div>
+        <p>User Growth Scaled</p>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <div class="stat-num-wrap"><span class="stat-num" data-count="10">0</span><span>+</span></div>
+        <p>Cities Expanded</p>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <div class="stat-num-wrap"><span class="stat-num" data-count="760">0</span></div>
+        <p>GMAT (Top 10%)</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Visual / 3D Rotating Avatar Card -->
+  <div class="hero-visual">
+    <div class="avatar-wrapper" id="avatar-tilt">
+      <div class="avatar-blob"></div>
+      <div class="avatar-ring ring-1"></div>
+      <div class="avatar-ring ring-2"></div>
+      
+      <div class="avatar-img-wrap">
+        <img src="profile.jpeg" alt="Adarsh Priyadarshi" class="avatar-img"/>
+      </div>
+
+      <!-- Floating Chips -->
+      <div class="float-chip chip-1">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="#d97706"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8" stroke="white" stroke-width="2" fill="none"/></svg>
+        Growth Strategy
+      </div>
+      <div class="float-chip chip-2">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="#16a34a"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+        Supply Chain Ops
+      </div>
+      <div class="float-chip chip-3">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="#d97706"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        Digital &amp; SEO
+      </div>
+      <div class="float-chip chip-4">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke="#b45309" stroke-width="2" fill="none"/></svg>
+        XGBoost &amp; ML
+      </div>
+      <div class="float-chip chip-5">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="#0284c7"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/></svg>
+        Tableau &amp; SQL
+      </div>
+      <div class="float-chip chip-6">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="#d97706"><circle cx="12" cy="12" r="9"/></svg>
+        Lean &amp; SOPs
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator"><div class="scroll-line"></div><span>scroll</span></div>
+</section>
+
+<!-- ========================================================================
+     INFINITE MARQUEE TICKER
+     ======================================================================== -->
+<div class="marquee-section">
+  <div class="marquee-track">
+    <div class="marquee-inner">
+      <span>Operations &amp; Supply Chain</span><span class="sep">&#10022;</span>
+      <span>Growth Marketing Strategy</span><span class="sep">&#10022;</span>
+      <span>Market Expansion</span><span class="sep">&#10022;</span>
+      <span>XGBoost &amp; ML Analytics</span><span class="sep">&#10022;</span>
+      <span>Lean Process Optimization</span><span class="sep">&#10022;</span>
+      <span>SEO &amp; Referral Campaigns</span><span class="sep">&#10022;</span>
+      <span>SQL &amp; Tableau Dashboards</span><span class="sep">&#10022;</span>
+      <span>SOP Development</span><span class="sep">&#10022;</span>
+      <span>WashU Olin MBA</span><span class="sep">&#10022;</span>
+      <span>GMAT 760 Dean's Scholar</span><span class="sep">&#10022;</span>
+      <span>Operations &amp; Supply Chain</span><span class="sep">&#10022;</span>
+      <span>Growth Marketing Strategy</span><span class="sep">&#10022;</span>
+      <span>Market Expansion</span><span class="sep">&#10022;</span>
+      <span>XGBoost &amp; ML Analytics</span><span class="sep">&#10022;</span>
+      <span>Lean Process Optimization</span><span class="sep">&#10022;</span>
+      <span>SEO &amp; Referral Campaigns</span><span class="sep">&#10022;</span>
+      <span>SQL &amp; Tableau Dashboards</span><span class="sep">&#10022;</span>
+      <span>SOP Development</span><span class="sep">&#10022;</span>
+    </div>
+  </div>
+</div>
+
+<!-- ========================================================================
+     ABOUT SECTION
+     ======================================================================== -->
+<section id="about" class="about section">
+  <div class="container">
+    <div class="section-label reveal-up">&mdash; About Me</div>
+    <div class="about-grid">
+      <div class="about-left">
+        <h2 class="section-title reveal-up">Driving business growth<br/><span class="accent-gradient">through operations &amp; market strategy</span></h2>
+        
+        <div class="about-location-block reveal-up">
+          <div class="about-loc-item">
+            <span>&#128205;</span>
+            <span><strong>St. Louis, MO</strong></span>
+          </div>
+          <div class="about-relocate-badge">
+            <span class="pulse-dot"></span>
+            <span>Open for relocation</span>
+          </div>
+        </div>
+
+        <p class="about-text reveal-up">
+          Hi! I&rsquo;m <strong>Adarsh Priyadarshi</strong> &mdash; an MBA Candidate at Washington University in St. Louis (Olin Business School) with a Bachelor of Computer Applications foundation and a <strong>760 GMAT (Dean's Scholar, Top 10%)</strong>.
+        </p>
+        <p class="about-text reveal-up">
+          My experience spans across <em>Operations &amp; Supply Chain</em> and <em>Growth Marketing Strategy</em>. In my MBA Consulting Project with Emerson, I developed predictive machine learning models reducing lead-time error from 36 days to 4.6 days (an 87% improvement) and enabling 95% on-time delivery across multi-site supply chains.
+        </p>
+        <p class="about-text reveal-up">
+          In growth &amp; marketing, at Haven Recovery Homes I launched outreach campaigns within 3 weeks that drove an 18% lift in monthly referrals, created 6 new institutional pathways, and boosted organic traffic by 30% via SEO. Previously at Rewiser, I led market expansion from 2 to 10+ cities, grew platform active users by 45% (to 3,200+), built 5+ SOPs, and directed multi-disciplinary teams.
+        </p>
+        
+        <div class="about-actions reveal-up">
+          <a href="#contact" class="btn-primary">
+            <span>Let&rsquo;s Work Together</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="Priyadarshi_Adarsh_SCOps_CV.pdf" target="_blank" class="btn-ghost" download>Download CV</a>
+        </div>
+      </div>
+
+      <div class="about-right reveal-up">
+        <div class="about-card glass-card">
+          <div class="about-card-icon">&#9881;</div>
+          <h4>Supply Chain &amp; ML</h4>
+          <p>XGBoost forecasting pipelines and Lean process mapping cutting forecast error by 87% with 95% on-time delivery.</p>
+        </div>
+        <div class="about-card glass-card">
+          <div class="about-card-icon">&#128640;</div>
+          <h4>Growth Marketing &amp; SEO</h4>
+          <p>Multi-channel campaigns, intake performance dashboards, and SEO content driving +18% referrals and +30% organic traffic.</p>
+        </div>
+        <div class="about-card glass-card">
+          <div class="about-card-icon">&#127760;</div>
+          <h4>Market Expansion &amp; Scale</h4>
+          <p>Scaled operations from 2 to 10+ cities impacting 4,000+ users; competitive intelligence across 10+ business models.</p>
+        </div>
+        <div class="about-card glass-card">
+          <div class="about-card-icon">&#127891;</div>
+          <h4>Academic &amp; Team Leadership</h4>
+          <p>WashU Olin MBA Dean's Scholar (GMAT 760, 99th percentile), leading cross-functional teams and large-scale initiatives.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================================
+     PROJECTS SECTION
+     ======================================================================== -->
+<section id="projects" class="projects-section section">
+  <div class="container">
+    <div class="section-label reveal-up">&mdash; Portfolio of Work</div>
+    <h2 class="section-title reveal-up">Strategic <span class="accent-gradient">Projects &amp; Initiatives</span></h2>
+
+    <div class="project-filter-bar reveal-up">
+      <button class="filter-btn active" data-filter="all">All Projects</button>
+      <button class="filter-btn" data-filter="scops">Operations &amp; Supply Chain</button>
+      <button class="filter-btn" data-filter="marketing">Marketing &amp; Growth</button>
+      <button class="filter-btn" data-filter="operations">Strategy &amp; Expansion</button>
+    </div>
+
+    <div class="projects-grid">
+      <!-- Project 1: Emerson -->
+      <div class="project-card glass-card reveal-up" data-category="scops">
+        <div class="project-top">
+          <div class="project-meta-row">
+            <span class="tag" style="color: #059669; border-color: rgba(16,185,129,0.3); background: rgba(16,185,129,0.1);">MBA Consulting</span>
+            <span class="project-dates">Jan 2025 – May 2025</span>
+          </div>
+          <div>
+            <span class="project-org">Emerson &bull; St. Louis, MO</span>
+            <h3>Supply Chain ML Lead Time Optimization</h3>
+          </div>
+          <ul class="project-bullets">
+            <li class="project-bullet">
+              <strong>87% Forecast Improvement:</strong> Built predictive machine learning models (XGBoost, Decision Trees) reducing lead time error from 36 days to 4.6 days, directly enabling 95% on-time delivery across multi-site supply chains.
+            </li>
+            <li class="project-bullet">
+              <strong>Python Automation:</strong> Automated quotation and demand forecasting workflows, eliminating manual handoffs and saving an estimated 9% in buffer time.
+            </li>
+            <li class="project-bullet">
+              <strong>Lean Continuous Improvement:</strong> Applied root cause analysis and process flow mapping to eliminate systemic operational bottlenecks.
+            </li>
+          </ul>
+        </div>
+        <div class="project-tags">
+          <span class="tag">XGBoost</span>
+          <span class="tag">Decision Trees</span>
+          <span class="tag">Python</span>
+          <span class="tag">Lean Operations</span>
+          <span class="tag">Root Cause</span>
+        </div>
+      </div>
+
+      <!-- Project 2: Haven Recovery Homes -->
+      <div class="project-card glass-card reveal-up" data-category="marketing">
+        <div class="project-top">
+          <div class="project-meta-row">
+            <span class="tag" style="color: #d97706; border-color: rgba(245,158,11,0.3); background: rgba(245,158,11,0.1);">MBA Internship</span>
+            <span class="project-dates">Jun 2025 – Aug 2025</span>
+          </div>
+          <div>
+            <span class="project-org">Haven Recovery Homes LLC &bull; St. Louis, MO</span>
+            <h3>Referral Performance Platform &amp; Growth Marketing</h3>
+          </div>
+          <ul class="project-bullets">
+            <li class="project-bullet">
+              <strong>+18% Monthly Referrals:</strong> Launched targeted digital and community outreach campaigns within 3 weeks, creating 6 new referral pathways with hospitals and shelters.
+            </li>
+            <li class="project-bullet">
+              <strong>80% Turnaround Reduction:</strong> Built an intake &amp; referral performance dashboard consolidating 3 sources, cutting report turnaround from 5 days to 1 day.
+            </li>
+            <li class="project-bullet">
+              <strong>SEO &amp; Content Optimization:</strong> Authored compliant communication templates and optimized content, boosting organic traffic by 30% with 100% HIPAA compliance.
+            </li>
+          </ul>
+        </div>
+        <div class="project-tags">
+          <span class="tag">Growth Marketing</span>
+          <span class="tag">Tableau</span>
+          <span class="tag">SEO Growth</span>
+          <span class="tag">Referral Strategy</span>
+        </div>
+      </div>
+
+      <!-- Project 3: Rewiser APM -->
+      <div class="project-card glass-card reveal-up" data-category="operations">
+        <div class="project-top">
+          <div class="project-meta-row">
+            <span class="tag" style="color: #7c3aed; border-color: rgba(139,92,246,0.3); background: rgba(139,92,246,0.1);">Leadership Role</span>
+            <span class="project-dates">Nov 2022 – Jan 2024</span>
+          </div>
+          <div>
+            <span class="project-org">Rewiser Educational Services &bull; Bangalore, India</span>
+            <h3>Digital Platform Operations &amp; Workflow Transformation</h3>
+          </div>
+          <ul class="project-bullets">
+            <li class="project-bullet">
+              <strong>+45% Active User Scale:</strong> Scaled active users from 2,200 to 3,200+ through data-driven program adjustments and tightened delivery standards.
+            </li>
+            <li class="project-bullet">
+              <strong>Cross-Functional Leadership:</strong> Led a team of 6 to redesign content production workflows, improving on-time delivery rates by 25%.
+            </li>
+            <li class="project-bullet">
+              <strong>Standardized Operating Procedures:</strong> Authored 5+ SOPs and 20+ modules, slashing employee onboarding time by 30% with a 95% on-time milestone completion rate.
+            </li>
+          </ul>
+        </div>
+        <div class="project-tags">
+          <span class="tag">Workflow Redesign</span>
+          <span class="tag">SOPs</span>
+          <span class="tag">KPI Management</span>
+          <span class="tag">Team Leadership</span>
+        </div>
+      </div>
+
+      <!-- Project 4: The Mavo Group -->
+      <div class="project-card glass-card reveal-up" data-category="marketing">
+        <div class="project-top">
+          <div class="project-meta-row">
+            <span class="tag">MBA Project</span>
+            <span class="project-dates">Jan 2025 – May 2025</span>
+          </div>
+          <div>
+            <span class="project-org">The Mavo Group &bull; Miami, FL</span>
+            <h3>Market Outreach &amp; UGC Creator Pipeline</h3>
+          </div>
+          <ul class="project-bullets">
+            <li class="project-bullet">
+              <strong>Market Research &amp; Talent Pipeline:</strong> Researched and identified top talent for commercial video production projects across Florida.
+            </li>
+            <li class="project-bullet">
+              <strong>Partner Network:</strong> Built an active pipeline of UGC collaborators to expand project reach and accelerate production turnaround.
+            </li>
+          </ul>
+        </div>
+        <div class="project-tags">
+          <span class="tag">Market Research</span>
+          <span class="tag">UGC Outreach</span>
+          <span class="tag">Pipeline Building</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================================
+     SKILLS & ARSENAL SECTION
+     ======================================================================== -->
+<section id="skills" class="skills-section section" style="background: var(--bg-2);">
+  <div class="container">
+    <div class="section-label reveal-up">&mdash; Skills &amp; Tools</div>
+    <h2 class="section-title reveal-up">My <span class="accent-gradient">strategic arsenal</span></h2>
+
+    <div class="skills-grid">
+      <div class="skill-group reveal-up">
+        <h4 class="skill-group-title">Operations &amp; Supply Chain</h4>
+        <div class="skill-items">
+          <div class="skill-pill">Process Optimization</div>
+          <div class="skill-pill">Lean Operations</div>
+          <div class="skill-pill">SOP Development</div>
+          <div class="skill-pill">Supply Chain Management</div>
+          <div class="skill-pill">Inventory &amp; Fulfillment</div>
+          <div class="skill-pill">Root Cause Analysis</div>
+          <div class="skill-pill">KPI Frameworks</div>
+        </div>
+      </div>
+
+      <div class="skill-group reveal-up">
+        <h4 class="skill-group-title">Growth Marketing &amp; Strategy</h4>
+        <div class="skill-items">
+          <div class="skill-pill">Growth Marketing Strategy</div>
+          <div class="skill-pill">Market Expansion (10+ Cities)</div>
+          <div class="skill-pill">SEO &amp; Organic Reach</div>
+          <div class="skill-pill">Referral Program Design</div>
+          <div class="skill-pill">UGC &amp; Partner Pipelines</div>
+          <div class="skill-pill">Stakeholder Alignment</div>
+          <div class="skill-pill">Competitive Intelligence</div>
+        </div>
+      </div>
+
+      <div class="skill-group reveal-up">
+        <h4 class="skill-group-title">Analytics &amp; Tech Stack</h4>
+        <div class="skill-items">
+          <div class="skill-pill">Python (Data / ML)</div>
+          <div class="skill-pill">XGBoost &amp; Predictive Models</div>
+          <div class="skill-pill">SQL Database Querying</div>
+          <div class="skill-pill">Tableau Analytics</div>
+          <div class="skill-pill">JIRA &amp; Agile Management</div>
+          <div class="skill-pill">Microsoft Excel / Office</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================================
+     EXPERIENCE & EDUCATION TIMELINE
+     ======================================================================== -->
+<section id="experience" class="experience-section section">
+  <div class="container">
+    <div class="section-label reveal-up">&mdash; Experience &amp; Education</div>
+    <h2 class="section-title reveal-up">My <span class="accent-gradient">journey</span></h2>
+
+    <div class="timeline">
+      <!-- Item 1: Haven Recovery Homes -->
+      <div class="timeline-item reveal-up">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card glass-card">
+          <div class="tl-header">
+            <div>
+              <h4 class="tl-role">Summer MBA Intern &ndash; Marketing &amp; Operations</h4>
+              <p class="tl-company">Haven Recovery Homes LLC &bull; St. Louis, MO, USA</p>
+            </div>
+            <span class="tl-date">Jun 2025 &mdash; Aug 2025</span>
+          </div>
+          <p class="tl-desc">Took full ownership of digital and community outreach operations; launched campaigns within 3 weeks that increased monthly referral inquiries by 18% and created 6 new referral pathways with local hospitals and shelters. Built an intake and referral performance dashboard consolidating data across 3 sources, cutting turnaround from 5 days to 1 day (80% reduction). Produced SEO-optimized content and HIPAA-compliant communication templates, boosting organic traffic by 30%.</p>
+          <div class="tl-tags">
+            <span class="tag">Marketing Operations</span>
+            <span class="tag">Tableau</span>
+            <span class="tag">SEO Growth</span>
+            <span class="tag">Referral Strategy</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2: Rewiser APM -->
+      <div class="timeline-item reveal-up">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card glass-card">
+          <div class="tl-header">
+            <div>
+              <h4 class="tl-role">Associate Program Manager (Strategy &amp; Operations)</h4>
+              <p class="tl-company">Rewiser Educational Services Pvt Ltd &bull; Bangalore, India</p>
+            </div>
+            <span class="tl-date">Nov 2022 &mdash; Jan 2024</span>
+          </div>
+          <p class="tl-desc">Led a cross-functional team of 6 to redesign the content production workflow, eliminating bottlenecks and improving on-time delivery rates by 25%. Scaled active user base 45% (2,200 to 3,200+) through data-driven program adjustments. Built 5+ SOPs and 20+ modules, reducing onboarding time by 30%. Designed a 5-stage recruitment &amp; training program for 50+ interns, boosting team productivity by 40% with a 95% on-time milestone completion rate.</p>
+          <div class="tl-tags">
+            <span class="tag">Team Leadership</span>
+            <span class="tag">SOPs</span>
+            <span class="tag">KPIs</span>
+            <span class="tag">Scaling</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3: Rewiser Associate -->
+      <div class="timeline-item reveal-up">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card glass-card">
+          <div class="tl-header">
+            <div>
+              <h4 class="tl-role">Associate (Growth &amp; Strategy)</h4>
+              <p class="tl-company">Rewiser Educational Services Pvt Ltd &bull; Bangalore, India</p>
+            </div>
+            <span class="tl-date">Sep 2020 &mdash; Oct 2022</span>
+          </div>
+          <p class="tl-desc">Designed and executed a market expansion strategy that scaled educational programs from 2 to 10+ cities, impacting 4,000+ learners across multiple geographies simultaneously. Created 15+ training videos &amp; 30+ documentation resources, increasing team knowledge retention by 40%. Reduced content production errors by 25% and delivered competitive analysis of 10+ models to inform leadership investment decisions.</p>
+          <div class="tl-tags">
+            <span class="tag">Market Expansion</span>
+            <span class="tag">Process Control</span>
+            <span class="tag">Competitive Analysis</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 4: WashU Olin MBA -->
+      <div class="timeline-item reveal-up">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card glass-card">
+          <div class="tl-header">
+            <div>
+              <h4 class="tl-role">Master of Business Administration (MBA)</h4>
+              <p class="tl-company">Washington University in St. Louis &bull; Olin Business School</p>
+            </div>
+            <span class="tl-date">Jul 2024 &mdash; May 2026</span>
+          </div>
+          <p class="tl-desc">GMAT: 760 (99th Percentile). Dean's Scholar (Top 10% of class). Active member of Strategy, Marketing, and Supply Chain &amp; Operations Clubs. Consulting with Emerson developing ML lead time forecasting pipelines and Lean process improvements.</p>
+          <div class="tl-tags">
+            <span class="tag">GMAT 760</span>
+            <span class="tag">Dean's Scholar</span>
+            <span class="tag">Marketing Strategy</span>
+            <span class="tag">Supply Chain</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 5: Bangalore University BCA -->
+      <div class="timeline-item reveal-up">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card glass-card">
+          <div class="tl-header">
+            <div>
+              <h4 class="tl-role">Bachelor of Computer Applications (BCA)</h4>
+              <p class="tl-company">Bangalore University &bull; Bangalore, India</p>
+            </div>
+            <span class="tl-date">Jul 2017 &mdash; Sep 2020</span>
+          </div>
+          <p class="tl-desc">Foundation in computer science, software engineering, databases, and programming. Club Secretary of the Entrepreneurship Development Cell (EDC): engaged 300+ students, raised $10K for 750+ students, and organized a 2,500+ participant IT fest and 200+ student business conference.</p>
+          <div class="tl-tags">
+            <span class="tag">Computer Applications</span>
+            <span class="tag">EDC Secretary</span>
+            <span class="tag">Event Ops &amp; Marketing</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================================
+     CONTACT SECTION
+     ======================================================================== -->
+<section id="contact" class="contact-section section" style="background: var(--bg-2);">
+  <div class="container">
+    <div class="section-label reveal-up" style="text-align: center;">&mdash; Get In Touch</div>
+    <h2 class="section-title reveal-up" style="text-align: center; max-width: 750px; margin-left: auto; margin-right: auto;">
+      Let&rsquo;s build something <span class="accent-gradient">impactful together</span>
+    </h2>
+    <p class="contact-intro reveal-up" style="text-align: center; max-width: 640px; margin: 0 auto 48px;">
+      Looking for a versatile leader across Supply Chain Operations, Growth Marketing, Strategy, or Consulting? I&rsquo;m open to new opportunities and relocation. Click below to copy or reach out directly.
+    </p>
+
+    <div class="contact-cards-grid reveal-up">
+      <div class="contact-info-item copy-trigger" data-copy="a.priyadarshi@wustl.edu">
+        <div class="ci-icon">&#9993;</div>
+        <div>
+          <p class="ci-label">WashU Email (Click to copy)</p>
+          <p class="ci-value">a.priyadarshi@wustl.edu</p>
+        </div>
+      </div>
+
+      <div class="contact-info-item copy-trigger" data-copy="priyadarshiadarsh2026@gmail.com">
+        <div class="ci-icon">&#128236;</div>
+        <div>
+          <p class="ci-label">Personal Email (Click to copy)</p>
+          <p class="ci-value">priyadarshiadarsh2026@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="contact-info-item copy-trigger" data-copy="(314)-224-4062">
+        <div class="ci-icon">&#9742;</div>
+        <div>
+          <p class="ci-label">Phone (Click to copy)</p>
+          <p class="ci-value">(314)-224-4062</p>
+        </div>
+      </div>
+
+      <div class="contact-info-item">
+        <div class="ci-icon">&#128205;</div>
+        <div>
+          <p class="ci-label">Location</p>
+          <p class="ci-value">St. Louis, MO &bull; Open to Relocation</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-actions-center reveal-up">
+      <a href="mailto:a.priyadarshi@wustl.edu" class="btn-primary">
+        <span>Send Email</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener" class="btn-ghost">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        <span>Connect on LinkedIn</span>
+      </a>
+      <a href="Priyadarshi_Adarsh_SCOps_CV.pdf" target="_blank" class="btn-ghost" download>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        <span>Download CV</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================================
+     FOOTER
+     ======================================================================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo footer-logo">Adarsh Priyadarshi<span class="dot">.</span></a>
+        <p class="footer-role">Operations &amp; Marketing Strategy Leader &bull; WashU MBA '26</p>
+      </div>
+      <p class="footer-tagline">Bridging operational excellence with strategic market growth.</p>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Adarsh Priyadarshi. All rights reserved. &bull; St. Louis, MO</p>
+      <a href="#hero" class="back-to-top" id="back-to-top" aria-label="Back to top">&#8593;</a>
+    </div>
+  </div>
+</footer>
+
+<!-- JavaScript Script -->
+<script src="js/main.js"></script>
+</body>
+</html>
