@@ -1269,9 +1269,9 @@ html.dark .avatar-img-wrap {
 
 .contact-cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  max-width: 960px;
+  max-width: 880px;
   margin: 0 auto 40px;
 }
 
@@ -1285,6 +1285,7 @@ html.dark .avatar-img-wrap {
   border: 1px solid var(--border);
   box-shadow: var(--shadow-xs);
   cursor: pointer;
+  min-width: 0;
   transition: all .2s var(--spring);
 }
 
@@ -1319,11 +1320,13 @@ html.dark .avatar-img-wrap {
 }
 
 .ci-value {
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-weight: 700;
   color: var(--text);
   font-family: 'Space Grotesk', monospace;
-  word-break: break-all;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .ci-content {
