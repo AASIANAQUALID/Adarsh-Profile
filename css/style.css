@@ -1132,6 +1132,43 @@ html.dark .avatar-img-wrap {
   color: var(--text-muted);
 }
 
+.projects-toggle-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+.projects-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 34px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  background: var(--surface);
+  border: 1px solid var(--border-2);
+  color: var(--text-primary);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+  transition: all .25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.projects-toggle-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(217, 119, 6, 0.18);
+}
+
+.projects-toggle-btn .btn-chevron {
+  transition: transform .3s ease;
+}
+
+.projects-toggle-btn.expanded .btn-chevron {
+  transform: rotate(180deg);
+}
+
 /* ── Timeline Section (Experience & Education) ── */
 .timeline {
   position: relative;

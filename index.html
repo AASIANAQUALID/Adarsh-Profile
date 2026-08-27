@@ -257,12 +257,11 @@
     <div class="project-filter-bar reveal-up">
       <button class="filter-btn active" data-filter="all">All Projects</button>
       <button class="filter-btn" data-filter="scops">Operations &amp; Supply Chain</button>
-      <button class="filter-btn" data-filter="pm">Project Management</button>
-      <button class="filter-btn" data-filter="marketing">Marketing &amp; Growth</button>
+      <button class="filter-btn" data-filter="growth-pm">Growth &amp; Project Management</button>
       <button class="filter-btn" data-filter="operations">Strategy &amp; Expansion</button>
     </div>
 
-    <div class="projects-grid">
+    <div class="projects-grid" id="projects-grid">
       <!-- Project 1: Emerson -->
       <div class="project-card glass-card reveal-up" data-category="scops">
         <div class="project-top">
@@ -296,7 +295,7 @@
       </div>
 
       <!-- Project 2: Haven Recovery Homes -->
-      <div class="project-card glass-card reveal-up" data-category="marketing">
+      <div class="project-card glass-card reveal-up" data-category="growth-pm">
         <div class="project-top">
           <div class="project-meta-row">
             <span class="tag" style="color: #d97706; border-color: rgba(245,158,11,0.3); background: rgba(245,158,11,0.1);">MBA Internship</span>
@@ -358,7 +357,7 @@
       </div>
 
       <!-- Project 4: The Mavo Group -->
-      <div class="project-card glass-card reveal-up" data-category="marketing">
+      <div class="project-card glass-card reveal-up" data-category="growth-pm">
         <div class="project-top">
           <div class="project-meta-row">
             <span class="tag">MBA Project</span>
@@ -385,7 +384,7 @@
       </div>
 
       <!-- Project 5: CBRE Forage Simulation -->
-      <div class="project-card glass-card reveal-up" data-category="pm operations">
+      <div class="project-card glass-card reveal-up" data-category="growth-pm operations">
         <div class="project-top">
           <div class="project-meta-row">
             <span class="tag" style="color: #2563eb; border-color: rgba(37,99,235,0.3); background: rgba(37,99,235,0.1);">Job Simulation</span>
@@ -415,6 +414,14 @@
           <span class="tag">CBRE</span>
         </div>
       </div>
+    </div>
+
+    <!-- Show More / Show Less Toggle Button -->
+    <div class="projects-toggle-wrap reveal-up" id="projects-toggle-wrap">
+      <button id="projects-toggle-btn" class="btn-ghost projects-toggle-btn" aria-label="Toggle more projects">
+        <span class="btn-text">Show More Projects</span>
+        <svg class="btn-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
     </div>
   </div>
 </section>
