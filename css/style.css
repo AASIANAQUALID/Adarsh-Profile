@@ -1404,9 +1404,34 @@ html.dark .avatar-img-wrap {
 /* ── Responsive Media Queries ── */
 @media (max-width: 1024px) {
   .hero {
-    grid-template-columns: 1fr;
-    padding-top: 100px;
-    gap: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 110px 32px 60px;
+    gap: 40px;
+  }
+  .hero-visual {
+    order: 1;
+  }
+  .hero-content {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  .hero-sub {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-cta {
+    justify-content: center;
+  }
+  .hero-stats {
+    justify-content: center;
+    width: 100%;
   }
   .about-grid {
     grid-template-columns: 1fr;
@@ -1415,17 +1440,11 @@ html.dark .avatar-img-wrap {
   .skills-grid {
     grid-template-columns: 1fr;
   }
-  .simulator-wrapper {
-    grid-template-columns: 1fr;
-  }
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-width: 768px) {
   .navbar {
-    padding: 0 24px;
+    padding: 0 20px;
   }
   .nav-links, .nav-actions .btn-hire {
     display: none;
@@ -1436,35 +1455,233 @@ html.dark .avatar-img-wrap {
   .container {
     padding: 0 20px;
   }
+  
+  /* Hero Mobile Layout: Photo at top & center aligned */
   .hero {
-    padding: 100px 20px 60px;
-  }
-  .hero-stats {
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
+    align-items: center;
+    text-align: center;
+    padding: 95px 16px 50px;
+    gap: 32px;
   }
+  
+  .hero-visual {
+    order: 1;
+    margin-bottom: 12px;
+  }
+  
+  .hero-content {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .hero-title {
+    font-size: clamp(2.2rem, 7.5vw, 3.2rem);
+    text-align: center;
+  }
+  
+  .hero-sub {
+    text-align: center;
+    margin: 0 auto 28px;
+    font-size: 1rem;
+  }
+  
+  .hero-cta {
+    justify-content: center;
+    width: 100%;
+    gap: 12px;
+  }
+  
+  .hero-cta .btn-primary,
+  .hero-cta .btn-ghost {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+  
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 16px;
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto;
+    padding-top: 24px;
+  }
+  
+  .stat {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .stat-num-wrap {
+    justify-content: center;
+    font-size: 1.85rem;
+  }
+  
+  .stat p {
+    text-align: center;
+    font-size: 0.76rem;
+  }
+  
   .stat-divider {
     display: none;
   }
+  
+  /* Avatar & Orbital Chips on Mobile */
+  .avatar-wrapper {
+    width: 210px;
+    height: 210px;
+  }
+  
+  .avatar-img-wrap {
+    width: 210px;
+    height: 210px;
+  }
+  
+  .ring-1 {
+    inset: -15px;
+  }
+  
+  .ring-2 {
+    display: none;
+  }
+  
+  .float-chip {
+    padding: 6px 12px;
+    font-size: 0.72rem;
+    gap: 5px;
+  }
+  
+  .chip-1 { top: 2%; right: -20px; }
+  .chip-2 { bottom: 6%; left: -30px; }
+  .chip-3 { top: 62%; right: -30px; }
+  .chip-4 { top: 6%; left: -25px; }
+  .chip-5 { display: none; }
+  .chip-6 { display: none; }
+
+  /* Sections Center Alignment */
+  .section {
+    padding: 80px 0;
+  }
+
+  .section-label {
+    text-align: center;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: clamp(1.85rem, 6vw, 2.4rem);
+    margin-bottom: 36px;
+  }
+
+  .about-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-location-block {
+    justify-content: center;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .about-actions {
+    justify-content: center;
+  }
+
   .about-right {
     grid-template-columns: 1fr;
   }
-  .sim-comparison-grid {
+
+  .about-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills-grid {
     grid-template-columns: 1fr;
   }
-  .avatar-wrapper {
-    width: 220px;
-    height: 220px;
+
+  .skill-group {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  .avatar-img-wrap {
-    width: 220px;
-    height: 220px;
+
+  .skill-items {
+    justify-content: center;
   }
-  .ring-1, .ring-2 {
-    display: none;
+
+  .project-filter-bar {
+    justify-content: center;
   }
-  .chip-5, .chip-6 {
-    display: none;
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    padding: 24px;
+    min-height: auto;
+  }
+
+  .timeline {
+    padding-left: 0;
+  }
+
+  .timeline::before {
+    left: 12px;
+  }
+
+  .timeline-item {
+    padding-left: 36px;
+  }
+
+  .timeline-dot {
+    left: 5px;
+  }
+
+  .timeline-card {
+    padding: 20px;
+  }
+
+  .tl-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .contact-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
   }
 }
