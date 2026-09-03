@@ -256,25 +256,22 @@ input, textarea {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 10px 24px;
-  border-radius: 50px;
-  background: rgba(255, 255, 255, 0.85);
-  border: 1.5px solid var(--border-2);
-  color: var(--text);
-  font-size: 0.85rem;
-  font-weight: 600;
-  transition: background .2s, border-color .2s, transform .2s var(--spring), color .2s;
-}
-
-[data-theme="dark"] .btn-hire {
-  background: rgba(24, 19, 13, 0.85);
+  padding: 10px 22px;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  border: none;
+  color: #ffffff;
+  font-size: 0.86rem;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(217, 119, 6, 0.35);
+  transition: all .25s var(--spring);
 }
 
 .btn-hire:hover {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: #fff;
   transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(217, 119, 6, 0.48);
+  color: #ffffff;
+  background: linear-gradient(135deg, #fbbf24, #d97706);
 }
 
 .btn-full {
@@ -283,50 +280,66 @@ input, textarea {
   border-radius: var(--r-sm);
 }
 
-/* ── Navbar ── */
+/* ── Floating Capsule Navbar (Reference Style) ── */
 .navbar {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 48px);
+  max-width: 1060px;
+  height: 64px;
   z-index: 500;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
-  padding: 0 48px;
-  height: 72px;
-  background: transparent;
-  border-bottom: 1px solid transparent;
-  box-shadow: none;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-  transition: background .35s var(--transition), backdrop-filter .35s, border-color .35s, box-shadow .35s;
+  gap: 20px;
+  padding: 0 28px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1.5px solid rgba(245, 158, 11, 0.28);
+  box-shadow: 0 12px 36px rgba(41, 24, 4, 0.08), 0 2px 8px rgba(217, 119, 6, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  transition: all .35s var(--transition);
 }
 
 .navbar.scrolled {
-  background: rgba(255, 253, 250, 0.88);
-  backdrop-filter: blur(28px) saturate(190%);
-  -webkit-backdrop-filter: blur(28px) saturate(190%);
-  border-bottom: 1px solid rgba(217, 119, 6, 0.16);
-  box-shadow: 0 10px 30px rgba(41, 24, 4, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  top: 12px;
+  background: rgba(255, 253, 250, 0.95);
+  border-color: rgba(217, 119, 6, 0.35);
+  box-shadow: 0 16px 42px rgba(41, 24, 4, 0.12), 0 4px 14px rgba(217, 119, 6, 0.09), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+[data-theme="dark"] .navbar {
+  background: rgba(20, 16, 12, 0.88);
+  border: 1.5px solid rgba(245, 158, 11, 0.24);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 [data-theme="dark"] .navbar.scrolled {
-  background: rgba(12, 10, 8, 0.88);
-  border-bottom: 1px solid rgba(245, 158, 11, 0.20);
-  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  background: rgba(14, 11, 8, 0.95);
+  border-color: rgba(245, 158, 11, 0.36);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.82), inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .nav-logo {
-  font-size: 1.45rem;
-  font-weight: 900;
+  font-size: 1.35rem;
+  font-weight: 800;
   letter-spacing: -0.02em;
-  background: var(--grad-text);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #d97706;
+  background: none;
+  -webkit-text-fill-color: initial;
   flex-shrink: 0;
+  transition: opacity .2s;
+}
+
+[data-theme="dark"] .nav-logo {
+  color: #f59e0b;
+}
+
+.nav-logo:hover {
+  opacity: 0.9;
 }
 
 .dot {
@@ -564,7 +577,7 @@ input, textarea {
   background: var(--border);
 }
 
-/* Hero Visual / Avatar Card with Floating Chips */
+/* Hero Visual / Avatar Card with Floating Chips (Reference Style) */
 .hero-visual {
   position: relative;
   display: flex;
@@ -575,8 +588,8 @@ input, textarea {
 
 .avatar-wrapper {
   position: relative;
-  width: 270px;
-  height: 270px;
+  width: 280px;
+  height: 280px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -585,33 +598,66 @@ input, textarea {
 
 .avatar-blob {
   position: absolute;
-  inset: -20px;
-  background: radial-gradient(ellipse at 40% 40%, rgba(245, 158, 11, 0.35), transparent 70%);
+  inset: -25px;
+  background: radial-gradient(ellipse at 50% 50%, rgba(245, 158, 11, 0.30), transparent 70%);
   border-radius: 50%;
-  filter: blur(32px);
+  filter: blur(36px);
   animation: blob-drift 8s ease-in-out infinite alternate;
   pointer-events: none;
 }
 
 @keyframes blob-drift {
   from { transform: scale(1) translate(0, 0); }
-  to { transform: scale(1.1) translate(8px, -8px); }
+  to { transform: scale(1.1) translate(6px, -6px); }
 }
 
 .avatar-ring {
   position: absolute;
   border-radius: 50%;
-  border: 1.5px dashed var(--border-2);
-  animation: ring-spin 25s linear infinite;
   pointer-events: none;
 }
 
-.ring-1 { inset: -25px; }
-.ring-2 { inset: -55px; border-color: rgba(217, 119, 6, 0.14); animation-direction: reverse; animation-duration: 35s; }
+.ring-1 {
+  inset: -30px;
+  border: 1.5px dashed rgba(245, 158, 11, 0.28);
+  animation: ring-spin 40s linear infinite;
+}
 
-@keyframes ring-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.ring-2 {
+  inset: -65px;
+  border: 1px solid rgba(217, 119, 6, 0.14);
+  animation: ring-spin 60s linear infinite reverse;
+}
+
+/* Orbit halo top node (matching Image 2) */
+.avatar-orbit-node {
+  position: absolute;
+  top: -65px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(245, 158, 11, 0.45);
+  background: radial-gradient(circle, rgba(254, 243, 199, 0.75) 0%, rgba(254, 243, 199, 0.15) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 1;
+}
+
+[data-theme="dark"] .avatar-orbit-node {
+  border-color: rgba(245, 158, 11, 0.35);
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.25) 0%, rgba(0, 0, 0, 0.1) 100%);
+}
+
+.node-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 0 8px rgba(245, 158, 11, 0.8);
 }
 
 .avatar-img-wrap {
@@ -619,8 +665,8 @@ input, textarea {
   height: 270px;
   border-radius: 50%;
   overflow: hidden;
-  border: 3px solid var(--accent);
-  box-shadow: 0 0 60px rgba(217, 119, 6, 0.32), 0 0 0 10px rgba(217, 119, 6, 0.10);
+  border: 3.5px solid #f59e0b;
+  box-shadow: 0 0 45px rgba(217, 119, 6, 0.28), 0 0 0 10px rgba(245, 158, 11, 0.12);
   background: linear-gradient(135deg, #fef3c7, #fde68a);
   position: relative;
   z-index: 2;
@@ -628,8 +674,8 @@ input, textarea {
 
 [data-theme="dark"] .avatar-img-wrap,
 html.dark .avatar-img-wrap {
-  border: 3px solid rgba(245, 158, 11, 0.55);
-  box-shadow: 0 0 60px rgba(245, 158, 11, 0.45), 0 0 0 10px rgba(245, 158, 11, 0.15);
+  border: 3.5px solid #f59e0b;
+  box-shadow: 0 0 50px rgba(245, 158, 11, 0.38), 0 0 0 10px rgba(245, 158, 11, 0.15);
   background: linear-gradient(135deg, #2c2010, #1a1309);
 }
 
@@ -643,47 +689,70 @@ html.dark .avatar-img-wrap {
 }
 
 .avatar-wrapper:hover .avatar-img {
-  transform: scale(1.06);
+  transform: scale(1.05);
 }
 
-/* Floating Skill Chips */
+/* ── Compact Floating Skill Chips (Exact Reference Style) ── */
 .float-chip {
   position: absolute;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  border-radius: 50px;
-  background: var(--surface-2);
-  border: 1px solid var(--border-2);
-  box-shadow: var(--shadow-sm);
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: var(--text);
-  z-index: 3;
-  backdrop-filter: blur(16px);
+  gap: 7px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  background: #ffffff;
+  border: 1px solid rgba(217, 119, 6, 0.14);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: #111827;
+  z-index: 4;
   white-space: nowrap;
   transition: all .2s var(--spring);
+}
+
+[data-theme="dark"] .float-chip {
+  background: #1c160e;
+  border: 1px solid rgba(245, 158, 11, 0.28);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.65);
+  color: #fef3c7;
 }
 
 .float-chip:hover {
   transform: scale(1.08) translateY(-2px);
   border-color: var(--accent);
+  box-shadow: 0 12px 30px rgba(217, 119, 6, 0.22);
 }
 
-.chip-1 { top: 6%; right: -25px; animation: float1 4.2s ease-in-out infinite; }
-.chip-2 { bottom: 15%; left: -45px; animation: float2 5.1s ease-in-out infinite; }
-.chip-3 { top: 60%; right: -45px; animation: float3 3.9s ease-in-out infinite; }
-.chip-4 { top: 12%; left: -35px; animation: float4 4.6s ease-in-out infinite; }
-.chip-5 { bottom: 4%; right: 5px; animation: float5 4.8s ease-in-out infinite; }
-.chip-6 { top: 50%; left: -55px; animation: float6 4.4s ease-in-out infinite; }
+.chip-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
 
-@keyframes float1 { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-@keyframes float2 { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(10px); } }
-@keyframes float3 { 0%, 100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-8px) rotate(2deg); } }
-@keyframes float4 { 0%, 100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-9px) rotate(-2deg); } }
-@keyframes float5 { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
-@keyframes float6 { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+.icon-plus { color: #ea580c; }
+.icon-bolt { color: #d97706; }
+.icon-layers { color: #ea580c; }
+.icon-cloud { color: #0284c7; }
+.icon-spark { color: #d97706; }
+.icon-square { color: #16a34a; }
+
+/* Positions around circular avatar (matching Image 2 layout) */
+.chip-1 { top: 4%; right: -35px; animation: float1 4.2s ease-in-out infinite; }
+.chip-2 { top: 12%; left: -45px; animation: float4 4.6s ease-in-out infinite; }
+.chip-3 { top: 48%; right: -55px; animation: float3 3.9s ease-in-out infinite; }
+.chip-4 { top: 48%; left: -60px; animation: float6 4.4s ease-in-out infinite; }
+.chip-5 { bottom: 6%; right: -20px; animation: float5 4.8s ease-in-out infinite; }
+.chip-6 { bottom: 8%; left: -45px; animation: float2 5.1s ease-in-out infinite; }
+
+@keyframes float1 { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+@keyframes float2 { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
+@keyframes float3 { 0%, 100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-7px) rotate(1.5deg); } }
+@keyframes float4 { 0%, 100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-8px) rotate(-1.5deg); } }
+@keyframes float5 { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(7px); } }
+@keyframes float6 { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
 
 .scroll-indicator {
   position: absolute;
@@ -1600,15 +1669,23 @@ html.dark .avatar-img-wrap {
     display: none;
   }
   
+  /* Floating Navbar on Mobile */
+  .navbar {
+    top: 10px;
+    width: calc(100% - 20px);
+    height: 56px;
+    padding: 0 16px;
+  }
+
   /* Avatar & Orbital Chips on Mobile */
   .avatar-wrapper {
-    width: 210px;
-    height: 210px;
+    width: 220px;
+    height: 220px;
   }
   
   .avatar-img-wrap {
-    width: 210px;
-    height: 210px;
+    width: 220px;
+    height: 220px;
   }
   
   .ring-1 {
@@ -1618,17 +1695,23 @@ html.dark .avatar-img-wrap {
   .ring-2 {
     display: none;
   }
+
+  .avatar-orbit-node {
+    top: -36px;
+    width: 48px;
+    height: 48px;
+  }
   
   .float-chip {
-    padding: 6px 12px;
-    font-size: 0.72rem;
+    padding: 5px 11px;
+    font-size: 0.70rem;
     gap: 5px;
   }
   
-  .chip-1 { top: 2%; right: -20px; }
-  .chip-2 { bottom: 6%; left: -30px; }
-  .chip-3 { top: 62%; right: -30px; }
-  .chip-4 { top: 6%; left: -25px; }
+  .chip-1 { top: 0%; right: -25px; }
+  .chip-2 { top: 12%; left: -30px; }
+  .chip-3 { top: 56%; right: -30px; }
+  .chip-4 { top: 56%; left: -35px; }
   .chip-5 { display: none; }
   .chip-6 { display: none; }
 
