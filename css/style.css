@@ -629,37 +629,6 @@ input, textarea {
   animation: ring-spin 60s linear infinite reverse;
 }
 
-/* Orbit halo top node (matching Image 2) */
-.avatar-orbit-node {
-  position: absolute;
-  top: -65px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  border: 1.5px solid rgba(245, 158, 11, 0.45);
-  background: radial-gradient(circle, rgba(254, 243, 199, 0.75) 0%, rgba(254, 243, 199, 0.15) 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-  z-index: 1;
-}
-
-[data-theme="dark"] .avatar-orbit-node {
-  border-color: rgba(245, 158, 11, 0.35);
-  background: radial-gradient(circle, rgba(245, 158, 11, 0.25) 0%, rgba(0, 0, 0, 0.1) 100%);
-}
-
-.node-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #ffffff;
-  box-shadow: 0 0 8px rgba(245, 158, 11, 0.8);
-}
-
 .avatar-img-wrap {
   width: 270px;
   height: 270px;
@@ -1873,12 +1842,6 @@ html.dark .avatar-img-wrap {
   
   .ring-2 {
     display: none;
-  }
-
-  .avatar-orbit-node {
-    top: -36px;
-    width: 48px;
-    height: 48px;
   }
   
   .float-chip {
