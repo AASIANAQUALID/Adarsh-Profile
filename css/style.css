@@ -577,31 +577,32 @@ input, textarea {
   background: var(--border);
 }
 
-/* Hero Visual / Avatar Card with Floating Chips (Reference Style) */
 .hero-visual {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 2;
+  padding: 40px 60px;
 }
 
 .avatar-wrapper {
   position: relative;
-  width: 280px;
-  height: 280px;
+  width: 270px;
+  height: 270px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  margin: 30px 40px;
 }
 
 .avatar-blob {
   position: absolute;
-  inset: -25px;
-  background: radial-gradient(ellipse at 50% 50%, rgba(245, 158, 11, 0.30), transparent 70%);
+  inset: -35px;
+  background: radial-gradient(ellipse at 50% 50%, rgba(245, 158, 11, 0.28), transparent 70%);
   border-radius: 50%;
-  filter: blur(36px);
+  filter: blur(40px);
   animation: blob-drift 8s ease-in-out infinite alternate;
   pointer-events: none;
 }
@@ -618,15 +619,15 @@ input, textarea {
 }
 
 .ring-1 {
-  inset: -30px;
-  border: 1.5px dashed rgba(245, 158, 11, 0.28);
-  animation: ring-spin 40s linear infinite;
+  inset: -45px;
+  border: 1.5px dashed rgba(245, 158, 11, 0.25);
+  animation: ring-spin 45s linear infinite;
 }
 
 .ring-2 {
-  inset: -65px;
-  border: 1px solid rgba(217, 119, 6, 0.14);
-  animation: ring-spin 60s linear infinite reverse;
+  inset: -95px;
+  border: 1px solid rgba(217, 119, 6, 0.16);
+  animation: ring-spin 70s linear infinite reverse;
 }
 
 .avatar-img-wrap {
@@ -661,7 +662,7 @@ html.dark .avatar-img-wrap {
   transform: scale(1.05);
 }
 
-/* ── Compact Floating Skill Chips (Exact Reference Style) ── */
+/* ── Compact Floating Skill Chips (Spacious Outer Orbit) ── */
 .float-chip {
   position: absolute;
   display: inline-flex;
@@ -708,13 +709,13 @@ html.dark .avatar-img-wrap {
 .icon-spark { color: #d97706; }
 .icon-square { color: #16a34a; }
 
-/* Positions around circular avatar (Outer Orbit Circle) */
-.chip-1 { top: -20px; right: -75px; animation: float1 4.2s ease-in-out infinite; }
-.chip-2 { top: -20px; left: -85px; animation: float4 4.6s ease-in-out infinite; }
-.chip-3 { top: 46%; right: -95px; animation: float3 3.9s ease-in-out infinite; }
-.chip-4 { top: 46%; left: -95px; animation: float6 4.4s ease-in-out infinite; }
-.chip-5 { bottom: -22px; right: -55px; animation: float5 4.8s ease-in-out infinite; }
-.chip-6 { bottom: -20px; left: -65px; animation: float2 5.1s ease-in-out infinite; }
+/* Spacious Positions around circular avatar (Far Outside Picture) */
+.chip-1 { top: -45px; right: -95px; animation: float1 4.2s ease-in-out infinite; }
+.chip-2 { top: -45px; left: -105px; animation: float4 4.6s ease-in-out infinite; }
+.chip-3 { top: 48%; right: -130px; animation: float3 3.9s ease-in-out infinite; }
+.chip-4 { top: 48%; left: -135px; animation: float6 4.4s ease-in-out infinite; }
+.chip-5 { bottom: -45px; right: -75px; animation: float5 4.8s ease-in-out infinite; }
+.chip-6 { bottom: -45px; left: -85px; animation: float2 5.1s ease-in-out infinite; }
 
 @keyframes float1 { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
 @keyframes float2 { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
