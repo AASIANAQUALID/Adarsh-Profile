@@ -708,13 +708,13 @@ html.dark .avatar-img-wrap {
 .icon-spark { color: #d97706; }
 .icon-square { color: #16a34a; }
 
-/* Positions around circular avatar (matching Image 2 layout) */
-.chip-1 { top: 4%; right: -35px; animation: float1 4.2s ease-in-out infinite; }
-.chip-2 { top: 12%; left: -45px; animation: float4 4.6s ease-in-out infinite; }
-.chip-3 { top: 48%; right: -55px; animation: float3 3.9s ease-in-out infinite; }
-.chip-4 { top: 48%; left: -60px; animation: float6 4.4s ease-in-out infinite; }
-.chip-5 { bottom: 6%; right: -20px; animation: float5 4.8s ease-in-out infinite; }
-.chip-6 { bottom: 8%; left: -45px; animation: float2 5.1s ease-in-out infinite; }
+/* Positions around circular avatar (Outer Orbit Circle) */
+.chip-1 { top: -20px; right: -75px; animation: float1 4.2s ease-in-out infinite; }
+.chip-2 { top: -20px; left: -85px; animation: float4 4.6s ease-in-out infinite; }
+.chip-3 { top: 46%; right: -95px; animation: float3 3.9s ease-in-out infinite; }
+.chip-4 { top: 46%; left: -95px; animation: float6 4.4s ease-in-out infinite; }
+.chip-5 { bottom: -22px; right: -55px; animation: float5 4.8s ease-in-out infinite; }
+.chip-6 { bottom: -20px; left: -65px; animation: float2 5.1s ease-in-out infinite; }
 
 @keyframes float1 { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
 @keyframes float2 { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
@@ -1850,10 +1850,10 @@ html.dark .avatar-img-wrap {
     gap: 5px;
   }
   
-  .chip-1 { top: 0%; right: -25px; }
-  .chip-2 { top: 12%; left: -30px; }
-  .chip-3 { top: 56%; right: -30px; }
-  .chip-4 { top: 56%; left: -35px; }
+  .chip-1 { top: -12px; right: -40px; }
+  .chip-2 { top: -12px; left: -45px; }
+  .chip-3 { top: 50%; right: -50px; }
+  .chip-4 { top: 50%; left: -50px; }
   .chip-5 { display: none; }
   .chip-6 { display: none; }
 
